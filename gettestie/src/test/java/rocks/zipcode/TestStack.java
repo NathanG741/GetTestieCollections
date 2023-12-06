@@ -18,8 +18,6 @@ public class TestStack {
         stack.push("Hello world");
         assertEquals(false, stack.isEmpty()); // false
     }
-
-
     @Test
     public void testHashSet() {
         HashSet<String> set = new HashSet<>();
@@ -121,5 +119,31 @@ public class TestStack {
 
         Assert.assertEquals(-1, two.compareTo(hi));
     }
+    @Test
+    public void TestStackPop(){
+        Stack<String> stack = new Stack<>();
+        stack.push("Hello");
+        stack.push("World");
+        stack.pop();
+
+        assertEquals("Hello", stack.peek());
+    }
+
+    @Test
+    public void TestStackPeek(){
+        Stack<String> stack = new Stack<>();
+        stack.push("Hello");
+        stack.push("World");
+
+        String actual = stack.peek();
+
+        assertEquals("World", actual);
+    }
+
+    @Test
+    public void TestStackIsEmpty(){
+        Stack<String> stack = new Stack<>();
+
+        assertTrue(stack.isEmpty());
+    }
 }
-//change
